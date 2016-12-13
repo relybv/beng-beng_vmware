@@ -3,6 +3,8 @@ fixtures:
     stdlib:
       repo: "https://github.com/puppetlabs/puppetlabs-stdlib.git"
       ref: "4.12.0"
+    vmwaretools: "https://github.com/craigwatson/puppet-vmwaretools.git"
+    openvmtools: "https://github.com/razorsedge/puppet-openvmtools.git"
  
 # default module layout
 

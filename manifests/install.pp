@@ -7,8 +7,22 @@ class beng_vmware::install {
   if $caller_module_name != $module_name {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
-
-  package { $::beng_vmware::package_name:
-    ensure => present,
+  case $::osfamily {
+    'RedHat', 'CentOs': {
+      case $::operatingsystemrelease {
+        /^6.*/: {
+          class { 'vmwaretools': }
+        }
+        /^7.*/: {
+          class { 'openvmtools7': }
+        }
+        default: {
+          fail("${::operatingsystemrelease} not supported")
+        }
+      }
+    }
+    default: {
+      fail("${::operatingsystem} not supported")
+    }
   }
 }

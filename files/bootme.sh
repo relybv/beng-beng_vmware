@@ -3,9 +3,9 @@
 # This script installs puppet 3.x or 4.x and deploy the manifest using puppet apply -e "include beng_vmware"
 #
 # Usage:
-# Ubuntu / Debian: wget https://raw.githubusercontent.com/relybv/dirict-beng_vmware/master/files/bootme.sh; bash bootme.sh
+# Ubuntu / Debian: wget https://raw.githubusercontent.com/relybv/beng-beng_vmware/master/files/bootme.sh; bash bootme.sh
 #
-# Red Hat / CentOS: curl https://raw.githubusercontent.com/relybv/dirict-beng_vmware/master/files/bootme.sh -o bootme.sh; bash bootme.sh
+# Red Hat / CentOS: curl https://raw.githubusercontent.com/relybv/beng-beng_vmware/master/files/bootme.sh -o bootme.sh; bash bootme.sh
 # Options: add 3 as parameter to install 4.x release
 
 # default major version, comment to install puppet 3.x
@@ -49,7 +49,7 @@ if [ -d /root/beng_vmware ]; then
   git pull
 else
   echo "Cloning repo"
-  git clone https://github.com/relybv/dirict-beng_vmware.git /root/beng_vmware
+  git clone https://github.com/relybv/beng-beng_vmware.git /root/beng_vmware
   cd /root/beng_vmware
 fi
 

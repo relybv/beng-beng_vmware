@@ -9,10 +9,4 @@ class beng_vmware::service {
     fail("Use of private class ${name} by ${caller_module_name}")
   }
 
-  service { $::beng_vmware::service_name:
-    ensure     => running,
-    enable     => true,
-    hasstatus  => true,
-    hasrestart => true,
-  }
 }

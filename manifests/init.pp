@@ -9,8 +9,6 @@
 #
 class beng_vmware
 (
-  $package_name = $::beng_vmware::params::package_name,
-  $service_name = $::beng_vmware::params::service_name,
 ) inherits ::beng_vmware::params {
 
   # validate parameters here
