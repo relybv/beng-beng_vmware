@@ -14,7 +14,7 @@ class beng_vmware::install {
           class { 'vmwaretools': }
         }
         /^7.*/: {
-          class { 'openvmtools7': }
+          class { 'openvmtools': }
         }
         default: {
           fail("${::operatingsystemrelease} not supported")
