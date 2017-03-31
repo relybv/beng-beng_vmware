@@ -12,11 +12,11 @@ class beng_vmware
 ) inherits ::beng_vmware::params {
 
   # validate parameters here
-  validate_string($package_name)
-  validate_string($service_name)
+  validate_string($beng_vmware::package_name)
+  validate_string($beng_vmware::service_name)
 
-  class { '::beng_vmware::install': } ->
-  class { '::beng_vmware::config': } ~>
-  class { '::beng_vmware::service': } ->
-  Class['::beng_vmware']
+  class { '::beng_vmware::install': }
+  -> class { '::beng_vmware::config': }
+  ~> class { '::beng_vmware::service': }
+  -> Class['::beng_vmware']
 }
